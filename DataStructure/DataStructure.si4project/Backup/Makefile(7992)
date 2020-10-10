@@ -1,0 +1,16 @@
+all:balance_binary_tree zf_list zf_rbtree offsetof
+
+balance_binary_tree:balance_binary_tree.c
+	gcc -g -o balance_binary_tree balance_binary_tree.c
+
+zf_list:zf_list_test.c
+	gcc -g -o zf_list zf_list_test.c
+
+zf_rbtree:zf_rbtree.c zf_rbtree_test.c
+	gcc -g -o zf_rbtree zf_rbtree.c zf_rbtree_test.c
+
+offsetof:offsetof.c
+	gcc -g -o offsetof offsetof.c
+  
+clean:
+	rm -f balance_binary_tree zf_list zf_rbtree offsetof
